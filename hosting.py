@@ -34,10 +34,12 @@ st.set_page_config(
 
 st . title("Movie Recommender System")
 
-movies_list = pickle . load(open('movies.pkl','rb'))
-movies = pd . DataFrame(movies_list)
+# movies_list = pickle . load(open('movies.pkl','rb'))
+# movies = pd . DataFrame(movies_list)
+movies = pd.read_pickle('movie_list.pkl')
 
-similarity = pickle . load(open('similarity.pkl','rb'))
+# similarity = pickle . load(open('similarity.pkl','rb'))
+similarity = pd.read_pickle('similarity.pkl')
 
 selected_movie_name = st . selectbox(
     "Select the movie:",

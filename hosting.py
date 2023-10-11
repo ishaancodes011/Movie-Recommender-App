@@ -27,6 +27,11 @@ def recommend(movie):
         recommended_movies . append(movies.iloc[i[0]].title)
     return recommended_movies, recommended_movies_posters
 
+st.set_page_config(
+    page_title= "Movie Recommender App",
+    page_icon = "🧊"
+)
+
 st . title("Movie Recommender System")
 
 movies_list = pickle . load(open('movies.pkl','rb'))
